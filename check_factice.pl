@@ -9,7 +9,9 @@ use warnings; # affichage des avertissements, on peut utiliser /usr/bin/perl -w
 use Monitoring::Plugin; # Chargement du module CPAN
  
 # déclaration de la sonde
-my $np = Monitoring::Plugin->new;
+my $np = Monitoring::Plugin->new(
+        shortname => 'Dummy',
+        );
  
 # Code de retour de la sonde
 $np->plugin_exit( OK, "OK");
